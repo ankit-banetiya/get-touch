@@ -1,27 +1,5 @@
-// 'use client';
-// import Image from "next/image";
 
 import Image from "next/image";
-
-// export default function Hero() {
-//   return (
-//     <>
-//       <section className="max-w-6xl mx-auto">
-//         <div className="w-full h-96">
-//           <img
-//             src="/assets/img/banner-img.png"
-//             alt="Dummy UI Left"
-//             className="rounded-3xl object-cover"
-//           />
-//         </div>
-//       </section>
-
-//     </>
-
-//   );
-
-// }
-
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden max-w-7xl mx-auto mt-16">
@@ -31,16 +9,16 @@ export default function Hero() {
         <img
           src="/assets/img/banner-img.png"   // 👉 put your image inside public folder
           alt="Hero"
-          className="w-full h-full object-cover rounded-3xl"
+          className="w-full h-full object-cover xl:rounded-3xl"
         />
         <div className="absolute inset-0 bg-black/30 rounded-3xl"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-8  flex flex-col justify-between py-12 text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8  flex flex-col justify-between py-12 text-white">
 
         {/* Top Content */}
-        <div className="flex justify-between items-start h-80">
+        <div className="flex justify-between items-start h-64 md:h-80">
 
           <div className="max-w-xl space-y-6 ">
             <p className="text-sm md:text-base text-gray-200">

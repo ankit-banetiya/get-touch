@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "get touch",
-  description: "get touch with us",
+  title: "get launch",
+  description: "get launch with us",
 };
 
 export default function RootLayout({ children }) {

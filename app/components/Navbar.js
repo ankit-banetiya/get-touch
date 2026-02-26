@@ -1,52 +1,105 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { Pen } from 'lucide-react';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="max-w-7xl mx-auto">
-      <nav className="flex items-center justify-between md:px-0 md:py-2 bg-white">
-        {/* Left side - Logo/Brand */}
-        <div className="flex items-center space-x-2">
-          <Image
-            src="/assets/img/logo.png"
-            alt="Dummy UI Left"
-            width={215}
-            height={50}
-          />
-        </div>
+    <header className="w-full bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <nav className="flex items-center justify-between py-3">
 
-        {/* Center - Navigation Links */}
-        <div className="flex px-6 py-1 items-center space-x-8 rounded-lg  text-sm">
-          <Link href="#work" className="text-black hover:text-gray-900 transition-colors font-medium">
-            Home
-          </Link>
-          <Link href="#experience" className="text-black hover:text-gray-900 transition-colors font-medium">
-            About us
-          </Link>
-          <Link href="#about" className="text-black hover:text-gray-900 transition-colors font-medium">
-            Service
-          </Link>
-          <Link href="#resume" className="text-black hover:text-gray-900 transition-colors font-medium">
-            Contact
-          </Link>
-        </div>
+          {/* Logo */}
+          <div className="flex items-center">
+            <Image
+              src="/assets/img/logo.png"
+              alt="Logo"
+              width={180}
+              height={45}
+              priority
+            />
+          </div>
 
-        {/* Right side - CTA Button */}
-        <div className="flex items-center gap-4">
-          <button className="font-medium text-sm bg-gray-100 flex items-center space-x-2 px-4 py-1 bg-black text-black rounded-full hover:bg-gray-800 transition-colors">
-           Socials
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <Link href="#" className="hover:text-gray-600 transition">
+              Home
+            </Link>
+            <Link href="#" className="hover:text-gray-600 transition">
+              About Us
+            </Link>
+            <Link href="#" className="hover:text-gray-600 transition">
+              Service
+            </Link>
+            <Link href="#" className="hover:text-gray-600 transition">
+              Contact
+            </Link>
+          </div>
+
+          {/* Desktop Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <button className="text-sm px-4 py-1 rounded-full border border-black hover:bg-gray-100 transition">
+              Socials
+            </button>
+
+            <button className="text-sm flex items-center gap-2 px-4 py-1 bg-black text-white rounded-full hover:bg-gray-800 transition">
+              Get in Touch
+              <Image
+                src="/assets/img/get-touch.png"
+                alt="icon"
+                width={12}
+                height={12}
+              />
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <button className="font-medium text-sm flex items-center space-x-2 px-4 py-1 bg-black text-white rounded-full hover:bg-gray-800 transition-colors">
-            <span>
-             Get in Touch
-            </span>
-               <Image src="/assets/img/get-touch.png" alt="nav-icon" width={10} height={10} />
-          </button>
-        </div>
-      </nav>
-    </div>
+        </nav>
+
+        {/* Mobile Dropdown */}
+        {isOpen && (
+          <div className="md:hidden flex flex-col gap-4 pb-4 text-sm font-medium">
+            <Link href="#" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+            <Link href="#" onClick={() => setIsOpen(false)}>
+              About Us
+            </Link>
+            <Link href="#" onClick={() => setIsOpen(false)}>
+              Service
+            </Link>
+            <Link href="#" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+
+            <div className="flex flex-col gap-3 pt-2">
+              <button className="w-full border border-black rounded-full py-2">
+                Socials
+              </button>
+
+              <button className="w-full flex justify-center items-center gap-2 bg-black text-white rounded-full py-2">
+                Get in Touch
+                <Image
+                  src="/assets/img/get-touch.png"
+                  alt="icon"
+                  width={12}
+                  height={12}
+                />
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
   );
 }

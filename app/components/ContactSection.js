@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ContactSection() {
   return (
     <section className="bg-black text-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         <div className="grid md:grid-cols-3 gap-16">
 
@@ -16,7 +16,7 @@ export default function ContactSection() {
           <div className="md:col-span-2">
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-medium leading-snug mb-12">
+            <h2 className="text-2xl md:text-4xl font-medium leading-snug mb-12">
               Ready to take your brand to the next level? <br />
               Partner with GetLaunch today and access professional solutions.
             </h2>

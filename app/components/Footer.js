@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="py-20">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 <div className="grid md:grid-cols-4 gap-2">
 
@@ -39,7 +39,7 @@ export default function Footer() {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:col-span-2">
 
                         {/* Quick Links */}
-                        <div className="flex justify-end">
+                        <div className="flex md:justify-end">
                             <div>
                             <h4 className="font-semibold mb-4 text-black">Quick Links</h4>
                             <ul className="space-y-3 text-gray-600">
@@ -53,7 +53,7 @@ export default function Footer() {
                         </div>
 
                         {/* Resources */}
-                        <div className="flex justify-end">
+                        <div className="flex md:justify-end">
                             <div >
                             <h4 className="font-semibold mb-4 text-black">Resources</h4>
                             <ul className="space-y-3 text-gray-600">
@@ -65,7 +65,7 @@ export default function Footer() {
                         </div>
 
                         {/* Follow Us */}
-                        <div className="flex justify-end">
+                        <div className="flex md:justify-end">
                             <div>
                             <h4 className="font-semibold mb-4 text-black">Follow us</h4>
                             <ul className="space-y-3 text-gray-600">
