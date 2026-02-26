@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ProjectShowcase() {
     return (
         <section className="bg-black text-white py-24">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 {/* Top Content */}
                 <div className="grid md:grid-cols-3 gap-12 mb-16">
@@ -15,7 +15,7 @@ export default function ProjectShowcase() {
 
                     {/* Heading */}
                     <div className="md:col-span-2 space-y-8">
-                        <h2 className="text-3xl md:text-4xl leading-snug font-medium text-gray-400">
+                        <h2 className="text-2xl md:text-4xl leading-snug font-medium text-gray-400">
                             Explore GetLaunch services{" "}
                             <span className="text-white">designed to elevate brands.</span>{" "}
                             From creative design to digital solutions, and deliver{" "}

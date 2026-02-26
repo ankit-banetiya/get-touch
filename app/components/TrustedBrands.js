@@ -19,14 +19,14 @@ const brands = [
 export default function TrustedBrands() {
     return (
         <section className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 {/* Top Content */}
                 <div className="grid md:grid-cols-2 gap-10 items-start mb-16 items-center">
 
                     {/* Left Heading */}
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-black">
+                        <h2 className="text-2xl md:text-4xl font-semibold leading-tight text-black">
                             Trusted by Brands That{" "}
                             <span className="text-green-600 block mt-2">
                                 Believe in Growth

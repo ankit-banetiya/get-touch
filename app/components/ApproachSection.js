@@ -1,7 +1,7 @@
 export default function ApproachSection() {
     return (
         <section className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 {/* Top Layout */}
                 <div className="grid md:grid-cols-3 gap-12 mb-16">
@@ -13,7 +13,7 @@ export default function ApproachSection() {
 
                     {/* Heading */}
                     <div className="md:col-span-2 space-y-6">
-                        <h2 className="text-3xl md:text-4xl leading-snug font-medium text-gray-500">
+                        <h2 className="text-2xl md:text-4xl leading-snug font-medium text-gray-500">
                             A strategy-first and{" "}
                             <span className="text-black">
                                 growth-driven marketing

@@ -2,11 +2,11 @@
 export default function AboutSection() {
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         
         {/* Heading */}
         <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-medium leading-snug text-gray-400">
+          <h2 className="text-2xl md:text-3xl md:text-4xl font-medium leading-snug text-gray-400">
             At GetLaunch Labs,{" "}
             <span className="text-black">
               Your Growth Partner,
@@ -20,7 +20,7 @@ export default function AboutSection() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3  mt-16 max-w-3xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16 max-w-3xl">
           
           {/* Stat 1 */}
           <div>
